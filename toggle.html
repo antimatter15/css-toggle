@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+<head>
+	<title>Pure CSS Toggle to Show</title>
+	<style>
+		.toggler, .untoggler {
+			color: black !important;
+		}
+		.untoggler {display: none; }
+		.toggler:target ~ .untoggler { display: block; }
+		.toggler:target { display: none; }
+		.toggler:before, .untoggler:before {
+			margin-left: 5px;
+			width: 20px;
+			display: inline-block;
+		}
+		.toggler:before { content: "+"; }
+		.untoggler:before { content: "–"; }
+		.toggler ~ div {
+			display: none;
+			margin-left: 25px;
+		}
+		.toggler ~ div.animate {
+			display: block;
+			height: 0px;
+			overflow: hidden;
+			-moz-transition: height 0.3s ease-in-out;
+			-o-transition: height 0.3s ease-in-out;
+			-webkit-transition: height 0.3s ease-in-out;
+			transition: height 0.3s ease-in-out;
+		}
+		.toggler:target ~ div { display: block; }
+
+		.toggler:target ~ div.animate {
+			height: 200px; /* I don't think you can animate from 0 to auto. */
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<a href="#first" id="first" class="toggler">Click to <b>Toggle</b></a><a href="#" class="untoggler">Click to <b>Toggle</b></a>
+		<div class="animate">
+			Hello, umm... whatcha saay? <br>
+			Mmm whatcha say?<br>
+			Mmm that you only meant well?<br>
+			Well of course you did<br>
+			Mmm whatcha say?<br>
+		</div>
+	</div>
+	<div>
+		<a href="#second" id="second" class="toggler">Click to <b>Toggle</b></a><a href="#" class="untoggler">Click to <b>Toggle</b></a>
+		<div class="animate">
+			In the early 1990s, it was discovered that, counterintuitively, using ethylene carbonate, which is a smaller molecule, solves this problem; only then Li batteries became commercialized. Electrochemical reduction of the solvent produces dense material that passes lithium cations through, but blocks solvent molecules. No such material is formed for propylene carbonate. Li battery can be cycled many times due to this solid electrolyte interface formation; without it, the battery cannot work.
+		</div>
+	</div>
+	<div>
+		<a href="#fecal" id="fecal" class="toggler">Click to <b>Toggle</b></a><a href="#" class="untoggler">Click to <b>Toggle</b></a>
+		<div class="animate">
+			Metallic lithium can intercalate between the graphene sheets in graphite in the anode. This anode is in contact with the electrolyte containing lithium salt. It needs to be an unreactive solvent that remains liquid over a wide temperature range, which narrows the choice tremendously. Initially, propylene carbonate was the electrolyte; that was a serious problem. The electrolyte diffused between the graphene sheets and weakened the anode. Li batteries were inefficient and dangerous.
+		</div>
+	</div>
+
+	<div>
+		<a href="#ben" id="ben" class="toggler">Click to <b>Toggle</b></a><a href="#" class="untoggler">Click to <b>Toggle</b></a>
+		<div class="animate">
+			I've always winced a slight bit when something purporting to be "pure CSS" makes it to the front of hacker news. Usually it accomplishes something that would be trivial to accomplish with Javascript, albeit usually with quite a clever method. Yesterday, a friend asked me how to do a click to unfurl type thing for his website. One problem- He's using wordpress.com. Limited HTML and no custom Javascript. The most obvious way to do it is to use a hidden checkbox element, but incidentally, wordpress.com doesn't let you put input elements there.
+		</div>
+	</div>
+
+
+
+
+	<div>
+		<a href="#coulton" id="coulton" class="toggler">Click to <b>Toggle</b></a><a href="#" class="untoggler">Click to <b>Toggle</b></a>
+		<div class="animate">
+			I’ve released this track as a single – it should be on iTunes, Amazon, and Google Play eventually if it’s not already. It’s a cover of Glee’s cover of my cover of Sir Mix-a-Lot’s song, which is to say it’s EXACTLY THE SAME as my original version. I’m releasing this under the same Harry Fox license I used for the 2005 release, so Mix will get all the royalties due to him. I’ll donate the proceeds from all sales that happen between now and the end of February to two charities: The VH1 Save the Music Foundation, and The It Gets Better Project. (fine print: iTunes will get their cut first of course, then I’ll deduct enough to cover my licensing fees, and split the rest between the two. iTunes sometimes takes a long time to report sales, sometimes even a couple of months, so I won’t be able to do the math and make the donation until I have the numbers. But I’ll let you know when I’ve gotten the amount and made the donation.)
+
+		</div>
+	</div>
